@@ -2,9 +2,9 @@
     "java.project.sourcePaths": [
         "teste02/src",
         "teste/src",
+        "modelo java",
         "exercicio1045/src",
-        "exercicio 1016",
         "atividade Pinbol/src",
-        "modelo java"
+        ""
     ]
 }
