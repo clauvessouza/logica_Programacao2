@@ -1,0 +1,135 @@
+claudioas@ubunto:~$ ls
+'Área de Trabalho'   Downloads   Modelos   Música    snap
+ Documentos          Imagens     Music     Público   Vídeos
+claudioas@ubunto:~$ mkdir Sistemas-Operacionais
+claudioas@ubunto:~$ mkdir Sistema_Operacionais
+claudioas@ubunto:~$ ls
+'Área de Trabalho'   Imagens   Música                 Sistemas-Operacionais
+ Documentos          Modelos   Público                snap
+ Downloads           Music     Sistema_Operacionais   Vídeos
+claudioas@ubunto:~$ cd Sistema_Operacionais/
+claudioas@ubunto:~/Sistema_Operacionais$ cd ..
+claudioas@ubunto:~$ rmdir
+rmdir: falta operando
+Tente "rmdir --help" para mais informações.
+claudioas@ubunto:~$ rmdir Sistema_Operacionais/
+claudioas@ubunto:~$ ls
+'Área de Trabalho'   Imagens   Música                  snap
+ Documentos          Modelos   Público                 Vídeos
+ Downloads           Music     Sistemas-Operacionais
+claudioas@ubunto:~$ rmdir Sistemas-Operacionais/
+claudioas@ubunto:~$ ls
+'Área de Trabalho'   Downloads   Modelos   Música    snap
+ Documentos          Imagens     Music     Público   Vídeos
+claudioas@ubunto:~$ mkdir Aula01082024
+claudioas@ubunto:~$ cd aula01082024
+bash: cd: aula01082024: Arquivo ou diretório inexistente
+claudioas@ubunto:~$ ls
+'Área de Trabalho'   Documentos   Imagens   Music    Público   Vídeos
+ Aula01082024        Downloads    Modelos   Música   snap
+claudioas@ubunto:~$ cd Aula01082024
+claudioas@ubunto:~/Aula01082024$ cd
+claudioas@ubunto:~$ rmdir Aul01082024
+rmdir: falhou em remover 'Aul01082024': Arquivo ou diretório inexistente
+claudioas@ubunto:~$ ls
+'Área de Trabalho'   Documentos   Imagens   Music    Público   Vídeos
+ Aula01082024        Downloads    Modelos   Música   snap
+claudioas@ubunto:~$ rmdir Aula01082024/
+claudioas@ubunto:~$ ls
+'Área de Trabalho'   Downloads   Modelos   Música    snap
+ Documentos          Imagens     Music     Público   Vídeos
+claudioas@ubunto:~$ mkdir meu_projeto
+claudioas@ubunto:~$ ls
+'Área de Trabalho'   Downloads   meu_projeto   Music    Público   Vídeos
+ Documentos          Imagens     Modelos       Música   snap
+claudioas@ubunto:~$ cd meu_projeto
+claudioas@ubunto:~/meu_projeto$ mkdir src data
+claudioas@ubunto:~/meu_projeto$ ls
+data  src
+claudioas@ubunto:~/meu_projeto$ cd src
+claudioas@ubunto:~/meu_projeto/src$ touch start.sh
+claudioas@ubunto:~/meu_projeto/src$ vi start.sh 
+claudioas@ubunto:~/meu_projeto/src$ nano start.sh 
+claudioas@ubunto:~/meu_projeto/src$ chmod 777 start.sh 
+claudioas@ubunto:~/meu_projeto/src$ cd :
+bash: cd: :: Arquivo ou diretório inexistente
+claudioas@ubunto:~/meu_projeto/src$ cd ..
+claudioas@ubunto:~/meu_projeto$ cd data
+claudioas@ubunto:~/meu_projeto/data$ touch data
+claudioas@ubunto:~/meu_projeto/data$ touch log.txt
+claudioas@ubunto:~/meu_projeto/data$ rm touch data
+rm: não foi possível remover 'touch': Arquivo ou diretório inexistente
+claudioas@ubunto:~/meu_projeto/data$ rm data
+rm: não foi possível remover 'data': Arquivo ou diretório inexistente
+claudioas@ubunto:~/meu_projeto/data$ ls
+log.txt
+claudioas@ubunto:~/meu_projeto/data$ ls
+log.txt
+claudioas@ubunto:~/meu_projeto/data$ ./src/start.sh>data/log.txt
+bash: data/log.txt: Arquivo ou diretório inexistente
+claudioas@ubunto:~/meu_projeto/data$ ./src/start.sh > data/log.txt
+bash: data/log.txt: Arquivo ou diretório inexistente
+claudioas@ubunto:~/meu_projeto/data$ ./src/start.sh > /data/log.txt
+bash: /data/log.txt: Arquivo ou diretório inexistente
+claudioas@ubunto:~/meu_projeto/data$ cd ..
+claudioas@ubunto:~/meu_projeto$ ./src/start.sh > /data/log.txt
+bash: /data/log.txt: Arquivo ou diretório inexistente
+claudioas@ubunto:~/meu_projeto$ ./src/start.sh > data/log.txt
+bash: ./src/start.sh: bin/bash: interpretador incorreto: Arquivo ou diretório inexistente
+claudioas@ubunto:~/meu_projeto$ ls
+data  src
+claudioas@ubunto:~/meu_projeto$ cd data/
+claudioas@ubunto:~/meu_projeto/data$ ls
+log.txt
+claudioas@ubunto:~/meu_projeto/data$ cd ..
+claudioas@ubunto:~/meu_projeto$ ls
+data  src
+claudioas@ubunto:~/meu_projeto$ src
+Comando 'src' não encontrado, mas poder ser instalado com:
+sudo apt install simple-revision-control
+claudioas@ubunto:~/meu_projeto$ cd src/
+claudioas@ubunto:~/meu_projeto/src$ ls
+start.sh
+claudioas@ubunto:~/meu_projeto/src$ nano start.sh 
+claudioas@ubunto:~/meu_projeto/src$ cd ..
+claudioas@ubunto:~/meu_projeto$ ./src/start.sh > data/log.txt 
+bash: ./src/start.sh: bin/bash: interpretador incorreto: Arquivo ou diretório inexistente
+claudioas@ubunto:~/meu_projeto$ cd ..
+claudioas@ubunto:~$ cd /m
+media/ mnt/   
+claudioas@ubunto:~$ cd ~/meu_projeto/src/
+claudioas@ubunto:~/meu_projeto/src$ ls
+start.sh
+claudioas@ubunto:~/meu_projeto/src$ nano start.sh
+claudioas@ubunto:~/meu_projeto/src$ cd ..
+claudioas@ubunto:~/meu_projeto$ ./src/start.sh > data/log.txt 
+claudioas@ubunto:~/meu_projeto$ cd log.txt
+bash: cd: log.txt: Arquivo ou diretório inexistente
+claudioas@ubunto:~/meu_projeto$ cat.data/log.txt
+bash: cat.data/log.txt: Arquivo ou diretório inexistente
+claudioas@ubunto:~/meu_projeto$ cat data/log.txt
+iniciando  o projeto
+qui 25 jul 2024 23:05:26 -03
+claudioas@ubunto:~/meu_projeto$ cp data/log.txt log_backup.txt
+claudioas@ubunto:~/meu_projeto$ ls
+data  log_backup.txt  src
+claudioas@ubunto:~/meu_projeto$ rm log_backup.txt 
+claudioas@ubunto:~/meu_projeto$ ls
+data  src
+claudioas@ubunto:~/meu_projeto$ rm data src
+rm: não foi possível remover 'data': É um diretório
+rm: não foi possível remover 'src': É um diretório
+claudioas@ubunto:~/meu_projeto$ rm -r data src
+claudioas@ubunto:~/meu_projeto$ ls
+claudioas@ubunto:~/meu_projeto$ cd ..
+claudioas@ubunto:~$ rm meu_projeto
+rm: não foi possível remover 'meu_projeto': É um diretório
+claudioas@ubunto:~$ ls
+'Área de Trabalho'   Downloads   meu_projeto   Music    Público   Vídeos
+ Documentos          Imagens     Modelos       Música   snap
+claudioas@ubunto:~$ rmdir meu_projeto
+claudioas@ubunto:~$ ls
+'Área de Trabalho'   Downloads   Modelos   Música    snap
+ Documentos          Imagens     Music     Público   Vídeos
+claudioas@ubunto:~$ 
+
